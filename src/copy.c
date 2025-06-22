@@ -1,4 +1,5 @@
 #define BUFSIZE 1024
+#include "header/error.h"
 #include <curses.h>
 #include <errno.h>
 #include <fcntl.h>
@@ -6,16 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
-void handle_err(const char* context)
-{
-    const int SIZE = 1024;
-    char buf[SIZE];
-
-    strerror_r(errno, buf, SIZE);
-    fprintf(stderr, "[ERROR] %s :%s\n", context, buf);
-    exit(1);
-}
 
 void copy(char* from, char* to)
 {

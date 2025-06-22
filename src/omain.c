@@ -5,4 +5,4 @@
 #include "header/stat.h"
 #include <stdio.h>
 // clang -o s sandbox.c
-int main(int argc, char** argv) { dirstat(argv[1]); }
+// int main(int argc, char** argv) { dirstat(argv[1]); }
